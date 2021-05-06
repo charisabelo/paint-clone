@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+/* ----- base ----- */
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  background-color: #b1b1b1;
+  font-family: Oswald, sans-serif;
+  overflow: hidden;
+}
+
+.top-bar {
+  padding-left: 1.5rem;
+  height: 5rem;
+  width: 100%;
+  position: fixed;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+}
+
+/* Font Awesome Icons */
+.fas,
+.far {
+  font-size: 2.5rem;
+  position: relative;
+  top: 0.5rem;
+  background-color: #525252;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 4rem;
+  text-align: center;
+  cursor: pointer;
+}
+.fas:hover, .fas:hover,
+.far:hover,
+.far:hover {
+  filter: brightness(90%);
+}
+
+.fa-fill-drip {
+  cursor: default;
+}
+
+.fa-undo-alt:hover,
+.fa-trash-alt:hover {
+  color: #df2525;
+}
+
+/* Tools */
+.active-tool {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.5rem;
+}
+.active-tool > span {
+  background-color: #525252;
+  border-radius: 0.5rem;
+  padding: 0.25rem 1.6rem;
+  color: white;
+  font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.tool {
+  position: relative;
+  top: 0.3rem;
+}
+.tool:not(:first-child) {
+  margin-left: 0.8rem;
+}
+
+.brush {
+  background-color: #727272;
+  height: 4.4rem;
+  width: 34.5rem;
+}
+.brush > * {
+  margin-left: 1rem;
+}
+
+.size {
+  min-width: 4rem;
+  height: 3.5rem;
+  position: relative;
+  top: 0.4rem;
+  left: -0.5rem;
+  background-color: #525252;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.8rem;
+  color: white;
+  font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Custom Slider */
+.slider {
+  -webkit-appearance: none;
+  position: relative;
+  left: -0.8rem;
+  width: 10rem;
+  height: 1rem;
+  background: #b1b1b1;
+  outline: none;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background: #2f2f2f;
+}
+.slider::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  background: #2f2f2f;
+}
+
+/* JS Color */
+.jscolor {
+  border-style: solid;
+  border-radius: 0.5rem;
+  height: 3.5rem;
+  width: 12rem;
+  margin-left: 0.3rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Canvas */
+canvas#canvas {
+  position: absolute;
+  top: 5rem;
+  cursor: crosshair;
+  z-index: 10;
+}
+
+/* Mobile Message */
+.mobile-message {
+  display: none;
+}
+
+/* Media Query: Mobile Devices */
+@media screen and (max-width: 800px) {
+  .mobile-message {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+  }
+}/*# sourceMappingURL=main.css.map */
